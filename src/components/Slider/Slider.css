@@ -1,0 +1,80 @@
+.slide{
+    height: 400px !important;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.slide-image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-slider .content{
+    position: relative;
+    z-index: 2;
+    align-self: center;
+    color: white;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+}
+
+.swiper-button-next, .swiper-button-prev{
+  color: white !important; 
+}
+
+.swiper-pagination-bullet{
+  background: white !important; 
+}
+
+
+/* .swiper-container {
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+  }
+
+  .parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+  }
+
+  .swiper-slide .subtitle {
+    font-size: 21px;
+  }
+
+  .swiper-slide .text {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+  } */

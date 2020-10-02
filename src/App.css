@@ -4,9 +4,7 @@
   padding: 0;
 
 }
-body{
-  background-color: pink;
-}
+
 .NavbarItems{
   background-color: white;
   height: 80px;
@@ -31,7 +29,7 @@ list-style:none;
 font-weight: bold; 
 }
 .nav-links{
-  font-size: 1.3rem; 
+  font-size: 1.1rem; 
 }
 .nav-links:hover{
   color:pink;
@@ -43,6 +41,7 @@ font-weight: bold;
 .menu-icon{
   display:none;
 }
+
 
 @media screen and (max-width: 980px){
   .NavbarItems{
@@ -84,4 +83,8 @@ font-weight: bold;
     position: fixed;
     right: 35px;
   }
+}
+.carousel{
+  height: 900px;
+  background-color: teal;
 }
