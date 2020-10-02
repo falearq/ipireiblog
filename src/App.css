@@ -1,3 +1,7 @@
+:root{
+  --primary-color: #D1AD37; 
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -11,8 +15,8 @@
   display:flex;
   align-items:center;
   justify-content: space-between;
-  color: black; 
-  font-family: 'Archivo', sans-serif;
+  color: #424242; 
+  font-family: 'Nunito Sans', sans-serif;
   padding-left: 35px;
   padding-right: 35px;
 }
@@ -30,10 +34,13 @@ font-weight: bold;
 }
 .nav-links{
   font-size: 1.1rem; 
+  text-transform: uppercase;
 }
 .nav-links:hover{
-  color:pink;
+  color: var(--primary-color); 
   cursor: pointer;
+  transition: all 0.5s ease; 
+  text-decoration: underline;
 }
 .fa-bars:hover{
  color:pink;
@@ -64,7 +71,7 @@ font-weight: bold;
     left: 0; 
     opacity: 1; 
     transition: all 0.5 ease; 
-    z-index: 1; 
+    z-index: 100; 
   }
 
   .nav-links{

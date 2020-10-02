@@ -11,13 +11,12 @@ import slide3 from "../../images/slide3.png";
 // slider configuration
 const params = {
   containerClass: "swiper-container hero-slider",
-  parallax: true,
   centeredSlides: true,
   grabCursor: true,
-  speed: 0,
+  speed: 2000,
   spaceBetween: 0,
   loop: true, 
-  effect: 'slide',
+  effect: 'fade',
   autoplay: {
     delay: 5000,
     disableOnInteraction: false
@@ -49,7 +48,7 @@ const HeroSlider = () => {
           <img src={slide1} alt="Familia"></img>
         </div>
         <div className="content">
-          <p>Texto para la imagen</p>
+          <p className='slide-text'>Texto 1</p>
         </div>
       </div>
       <div className="slide">
@@ -61,7 +60,7 @@ const HeroSlider = () => {
           <img src={slide2} alt="Familia"></img>
         </div>
         <div className="content">
-          <p>Texto para la imagen</p>
+          <p className='slide-text'>Texto 2</p>
         </div>
       </div>
       <div className="slide">
@@ -73,7 +72,7 @@ const HeroSlider = () => {
           <img src={slide3} alt="Familia"></img>
         </div>
         <div className="content">
-          <p>Texto para la imagen</p>
+          <p className='slide-text'>Texto 3</p>
         </div>
       </div>
     </Swiper>
