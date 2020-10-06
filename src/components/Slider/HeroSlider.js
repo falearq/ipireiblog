@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, {  useState } from "react";
 import Swiper from "react-id-swiper";
 import "./Slider.css";
 import 'swiper/css/swiper.css'

@@ -16,7 +16,7 @@ function ArticlePreview () {
         <div>
             <h1>ARTICLE PREV</h1>
 
-            <Posts articles={articles}/> 
+            <Posts/> 
         </div>
     )
 }

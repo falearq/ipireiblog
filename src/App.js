@@ -1,16 +1,20 @@
 import React from 'react';
 import './App.css';
-// import ArticlesPreview from './components/ArticlesPreview'
-import Navbar from './components/Navbar/Navbar'
-import Landing from './components/Landing'
-
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './pages/Home'
+import Post from './components/ArticlesPreview/post';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/> 
-      <Landing /> 
-    </div>
+    <Router>
+     <Switch> 
+      <div className="App">
+      <Route exact path="/" component={Home} />
+      <Route path="/post/:id" component={Post} />
+   
+      </div>
+      </Switch>
+    </Router>
   );
 }
 

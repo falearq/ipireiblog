@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^14.1.1",
     "@egjs/flicking": "^3.5.1",
     "@egjs/flicking-plugins": "^3.3.0",
     "@egjs/react-flicking": "^3.3.1",
