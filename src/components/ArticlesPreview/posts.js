@@ -23,7 +23,7 @@ import BasicPagination from './BasicPagination';
                 }
                 return size;
             };
-            
+            console.log(articles)
             // Get the size of an object
             var size = Object.size(articles.items);
            console.log(size)

@@ -14,7 +14,7 @@ export default function BasicPagination() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Pagination count={10} color="secondary" />
+      <Pagination count={2} color="secondary" />
     </div>
   );
 }
