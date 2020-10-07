@@ -95,3 +95,43 @@ font-weight: bold;
   height: 900px;
   background-color: teal;
 }
+.posts-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 60vw;
+}
+.post-title{
+  padding-top: 21px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.content-container{
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+.en-proceso{
+  width: 40vw;
+  background-color: #FFEBCD;
+}
+.post-author-indicator{
+  color: #9F9F9F;
+}
+.post-slug{
+  font-family:'Open Sans', sans-serif;
+  font-size: 14px;
+  text-align: left;
+}
+.post-link{
+  font-family:'Open Sans', sans-serif;
+  font-size: 18px;
+  color: #323232;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.author{
+  display: flex;
+  font-family:'Open Sans', sans-serif;
+}

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { client } from '../../utils/client'
 import Posts from './posts'
-
+import Enproceso from '../seccionenproceso/Enproceso'
 function ArticlePreview () {
     const [articles, setArticles] = useState([])
 
@@ -13,9 +13,8 @@ function ArticlePreview () {
     .catch(err => console.log(err))
   }, [])
     return(
-        <div>
-            <h1>ARTICLE PREV</h1>
-
+        <div className='content-container'>
+            <Enproceso/>
             <Posts/> 
         </div>
     )

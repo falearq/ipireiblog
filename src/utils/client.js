@@ -1,5 +1,5 @@
 import * as contentful from 'contentful'
-import React,{ useState,useEffect} from 'react'
+import { useState,useEffect} from 'react'
 
  export const client = contentful.createClient({
     space: "jvle8732yb07",
