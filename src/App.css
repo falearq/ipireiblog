@@ -162,3 +162,7 @@ font-weight: bold;
 .footer-subtitle{
   font-size: 12px;
 }
+.section-mision-vision{
+  background-color: tomato;
+  height: 800px;
+}
