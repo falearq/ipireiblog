@@ -11,7 +11,7 @@ export const menuItems = [
 }, 
 {
     title: 'Valores',
-    url: 'valores',
+    url: 'mision-vision#valores',
     cName: 'nav-links'
 }, 
 {

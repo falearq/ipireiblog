@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import styled from 'styled-components'
 import { menuItems } from './MenuItems'
 import logo from '../../images/logo.png'
+import { Link } from 'react-router-dom'
 
 const NavStyles = styled.nav`
 
@@ -28,7 +29,8 @@ export default function Navbar() {
                 <ul className={isOn?'nav-menu active':'nav-menu'}>
                 {menuItems.map((item, index) =>{
                     return (
-                    <li key={index} className={item.cName}>{item.title}</li>
+
+                    <Link to={item.url}><li key={index} className={item.cName}>{item.title}</li></Link>
                     )
                 })}
                 </ul>
