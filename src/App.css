@@ -147,9 +147,18 @@ font-weight: bold;
   color:#FFFFFF;
   padding: 57px;
  text-align: center;
+ font-family:'Open Sans', sans-serif;
   
   width: 100%;
 }
 .socialmedia-bar{
   height: 84px;
+  justify-content: space-between;
+}
+.footer-title{
+  font-size:17px;
+  padding-bottom: 17px;
+}
+.footer-subtitle{
+  font-size: 12px;
 }
