@@ -152,6 +152,7 @@ font-weight: bold;
 }
 .socialmedia-bar{
   display: flex;
+  flex-wrap: wrap;
   height: 84px;
   justify-content: center;
   gap: 5em;
