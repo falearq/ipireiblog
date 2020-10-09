@@ -5,7 +5,7 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 const Post = () => {
     const id = useParams()
     const [post,setPost] = useOneContentfulData(id)
-    console.log(post)
+    
 
     if(setPost){
         return(
