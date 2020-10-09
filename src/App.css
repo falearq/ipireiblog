@@ -12,6 +12,7 @@
 .NavbarItems{
   background-color: white;
   height: 80px;
+  width: 100vw;
   display:flex;
   align-items:center;
   justify-content: space-between;

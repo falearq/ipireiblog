@@ -22,7 +22,7 @@ export default function Navbar() {
    
     return (
         <NavStyles className='NavbarItems'>
-            <h1><img className='ipirei-logo' src={logo} alt='Logo de IPIREI' /></h1>
+            <Link to='/'><h1><img className='ipirei-logo' src={logo} alt='Logo de IPIREI' /></h1></Link>
             <div className='menu-icon' onClick={toggleIsOn}> 
                 <i className={isOn?'fas fa-times':'fas fa-bars'}></i>
             </div>
