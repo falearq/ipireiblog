@@ -148,21 +148,30 @@ font-weight: bold;
   padding: 57px;
  text-align: center;
  font-family:'Open Sans', sans-serif;
-  
   width: 100%;
 }
 .socialmedia-bar{
+  display: flex;
   height: 84px;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5em;
+  width: 100%;
 }
 .footer-title{
   font-size:17px;
   padding-bottom: 17px;
+  padding-top: 2.3em;
 }
 .footer-subtitle{
-  font-size: 12px;
+  font-size: 14px;
 }
 .section-mision-vision{
   background-color: tomato;
   height: 800px;
+}
+.image-container{
+  width: 739px; 
+  height: 317px;
+  overflow: hidden;
+
 }

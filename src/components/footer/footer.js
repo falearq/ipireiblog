@@ -1,14 +1,19 @@
 import { findByLabelText } from '@testing-library/react';
 import React from 'react';
 
-import {ReactComponent as Google} from '../../images/googleicon.svg'
-import {ReactComponent as Facebook} from '../../images/facebookicon.svg'
-import {ReactComponent as Twitter} from '../../images/twittericon.svg'
-import {ReactComponent as Instagram} from '../../images/instagramicon.svg'
+import googleicon from '../../images/googleicon.png'
+import facebookicon from '../../images/facebookicon.png'
+import twittericon from '../../images/twittericon.png'
+import instagramicon from '../../images/instagramicon.png'
 const Footers = () => {
     return ( 
                 <div className='footer'>
-                    <div className='socialmedia-bar'><a href='https://google.com'><Google/></a><Facebook/><Twitter/><Instagram/></div>
+                    <div className='socialmedia-bar'>
+                    <a href='https://google.com'><img alt='Google' src={googleicon}/></a>
+                    <a href='https://facebook.com'><img alt='Facebook' src={facebookicon}/></a>
+                    <a href='https://twitter.com'><img alt='Twitter' src={twittericon}/></a>
+                    <a href='https://instagram.com'><img alt='Insagram' src={instagramicon}/></a>
+                        </div>
                    <p className='footer-title'> © Instituto Panamericano de Investigación para las Relaciones Exitosas e Inteligentes, A.C.</p>
                    <p className='footer-subtitle'>Cuenca 48 Colonia Álamos CP 03400 Benito Juárez, CDMX.</p>
                 </div> 

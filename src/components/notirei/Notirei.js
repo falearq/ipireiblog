@@ -24,8 +24,9 @@ import BasicPagination from '../ArticlesPreview/BasicPagination';
             {articles.items.map(article =>{
                    return(
                          <div key={article.fields.id} className='post-container'>
-                    
-                  
+                    <div className='image-container'>
+                    <img src={article.fields.image.fields.file.url} style={{ }} alt={`${article.fields.title} 2020`}></img>
+                    </div>
                     <h1 className='post-title'> {article.fields.title}</h1>
                    <div className='author'><p className='post-author-indicator'>Por:</p> Rita Jaime</div>
                     <p className='post-slug'>{article.fields.slug}</p>
