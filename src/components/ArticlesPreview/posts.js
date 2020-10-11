@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{Fragment, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom';
 import {useContentfulData} from '../../utils/client'
 import BasicPagination from './BasicPagination';
@@ -8,13 +8,12 @@ import BasicPagination from './BasicPagination';
     const [articles, setArticles] = useContentfulData('general')
     const [page,setPage]=useState(1)
     const [pages,setPages]=useState(1)
-    
+    const imgperPage = 3;
     
     useEffect(()=>{
         const consultAPI = () => {
             
-      
-            const imgperPage = 3;
+           
             
             Object.size = function(obj) {
                 var size = 0, key;
@@ -23,7 +22,7 @@ import BasicPagination from './BasicPagination';
                 }
                 return size;
             };
-            console.log(articles)
+            
             // Get the size of an object
             var size = Object.size(articles.items);
            console.log(size)
@@ -60,18 +59,19 @@ import BasicPagination from './BasicPagination';
     }
 
     return (
-        <div>
+        <Fragment>
             <div className='posts-container'>
             {articles.items.map(article =>{
                    return(
                          <div key={article.fields.id} className='post-container'>
-                    
-                    <img src={article.fields.image.fields.file.url} style={{width: '739px', height: '317px'}} alt={`${article.fields.title} 2020`}></img>
+                    <div className='image-container'>
+                    <img className='image'src={article.fields.image.fields.file.url} alt={`${article.fields.title} 2020`}></img>
+                    </div>
                     <h1 className='post-title'> {article.fields.title}</h1>
-                   <div className='author'><p className='post-author-indicator'>Por:</p> Rita Jaime</div>
+                   <div className='author'><p className='post-author-indicator'>Por </p> {article.fields.author} <p className='post-date'>{article.fields.date}</p></div>
                     <p className='post-slug'>{article.fields.slug}</p>
                     <Link className='post-link' to={'/post/'+ article.sys.id} >Seguir Leyendo</Link>
-            </div>
+                    </div>
                    )
                 })}
                 {(page === 1)? null : (<button
@@ -85,7 +85,7 @@ import BasicPagination from './BasicPagination';
       >Next &raquo;</button>)}
             <BasicPagination></BasicPagination>
             </div>
-        </div>
+        </Fragment>
     )
 }
 

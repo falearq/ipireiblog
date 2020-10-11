@@ -8,6 +8,7 @@ import instagramicon from '../../images/instagramicon.png'
 const Footers = () => {
     return ( 
                 <div className='footer'>
+                    <p className='footer-copy'> ¡Síguenos en redes sociales!</p>
                     <div className='socialmedia-bar'>
                     <a href='https://google.com'><img alt='Google' src={googleicon}/></a>
                     <a href='https://facebook.com'><img alt='Facebook' src={facebookicon}/></a>

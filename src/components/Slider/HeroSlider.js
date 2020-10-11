@@ -38,7 +38,7 @@ const HeroSlider = () => {
   const parallaxAmount = swiper ? swiper.width * 0.95 : 0;
   const parallaxOpacity = 0;
   return (
-    <Swiper {...params} getSwiper={setSwiper}>
+    <Swiper className='slider' {...params} getSwiper={setSwiper}>
       <div className="slide">
         <div
           className="slide-image"
@@ -47,7 +47,7 @@ const HeroSlider = () => {
         >
           <img src={slide1} alt="Familia"></img>
         </div>
-        <div className="content">
+        <div className="slide-content">
           <p className='slide-text'>Texto 1</p>
         </div>
       </div>
@@ -59,7 +59,7 @@ const HeroSlider = () => {
         >
           <img src={slide2} alt="Familia"></img>
         </div>
-        <div className="content">
+        <div className="slide-content">
           <p className='slide-text'>Texto 2</p>
         </div>
       </div>
@@ -71,7 +71,7 @@ const HeroSlider = () => {
         >
           <img src={slide3} alt="Familia"></img>
         </div>
-        <div className="content">
+        <div className="slide-content">
           <p className='slide-text'>Texto 3</p>
         </div>
       </div>

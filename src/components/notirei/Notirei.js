@@ -28,7 +28,7 @@ import BasicPagination from '../ArticlesPreview/BasicPagination';
                     <img src={article.fields.image.fields.file.url} style={{ }} alt={`${article.fields.title} 2020`}></img>
                     </div>
                     <h1 className='post-title'> {article.fields.title}</h1>
-                   <div className='author'><p className='post-author-indicator'>Por:</p> Rita Jaime</div>
+                   <div className='author'><p className='post-author-indicator'>Por:</p> {article.fields.author}</div>
                     <p className='post-slug'>{article.fields.slug}</p>
                     <Link className='post-link' to={'/post/'+ article.sys.id} >Seguir Leyendo</Link>
             </div>

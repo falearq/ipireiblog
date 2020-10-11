@@ -11,7 +11,7 @@ import { useState,useEffect} from 'react'
     const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        client.getEntries({content_type: contentType})
+        client.getEntries({content_type: contentType, limit: 3})
         .then(entries => {
             setData(entries);
             setLoading(false);

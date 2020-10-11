@@ -2,8 +2,8 @@ import React,{useState} from 'react'
 import styled from 'styled-components'
 import { menuItems } from './MenuItems'
 import logo from '../../images/logo.png'
-import { Link } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link';
+import { NavLink } from 'react-router-dom'
+import { NavHashLink } from 'react-router-hash-link';
 
 const NavStyles = styled.nav`
 
@@ -22,17 +22,17 @@ export default function Navbar() {
    
     return (
         <NavStyles className='NavbarItems'>
-            <Link to='/'><h1><img className='ipirei-logo' src={logo} alt='Logo de IPIREI' /></h1></Link>
+            <NavLink to='/'><h1><img className='ipirei-logo' src={logo} alt='Logo de IPIREI' /></h1></NavLink>
             <div className='menu-icon' onClick={toggleIsOn}> 
                 <i className={isOn?'fas fa-times':'fas fa-bars'}></i>
             </div>
             <div> 
                 <ul className={isOn?'nav-menu active':'nav-menu'}>
-                <Link to='quienes-somos'> <li className='nav-links'>¿Quiénes somos?</li></Link>
-                <Link to='mision-vision'> <li className='nav-links'>Misión y Visión</li></Link>
-                <HashLink smooth to='/mision-vision#valores'><li className='nav-links'>Valores</li></HashLink>
-                <Link to='agenda-2030'> <li className='nav-links'>Agenda 2030</li></Link>
-                <Link to='contacto'> <li className='nav-links'>Contacto</li></Link>
+                <NavLink className='nav-links trans' to='/quienes-somos' activeClassName="active"> <li className='nav-links trans'>¿Quiénes somos?</li></NavLink>
+                <NavLink className='nav-links trans' to='/mision-vision' activeClassName="active"> <li className='nav-links trans'>Misión y Visión</li></NavLink>
+                <NavHashLink  className='nav-links trans' smooth to='/mision-vision#valores'><li className='nav-links trans'>Valores</li></NavHashLink>
+                <NavLink className='nav-links trans' to='/agenda-2030' activeClassName="active"> <li className='nav-links trans'>Agenda 2030</li></NavLink>
+                <NavLink  className='nav-links trans' to='/contacto' activeClassName="active"> <li className='nav-links trans'>Contacto</li></NavLink>
                 </ul>
             </div>
 
