@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import styled from 'styled-components'
-import { menuItems } from './MenuItems'
 import logo from '../../images/logo.png'
 import { NavLink } from 'react-router-dom'
 import { NavHashLink } from 'react-router-hash-link';

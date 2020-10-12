@@ -2,7 +2,6 @@
 .slide{
     height: 400px !important;
     display: flex;
-    position: relative;
     margin-top: 80px;
 }
 .slide-image{

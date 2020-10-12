@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import {useOneContentfulData} from '../../utils/client'
 import {useParams} from 'react-router-dom'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
@@ -44,7 +44,7 @@ const Post = () => {
             <div className='post-footer'>
                 <p>Comparte este artículo:</p>
                 <div className='post-icon-container'>
-                <FacebookShareButton url='https://soundcloud.com/dominicloretti'><img src={fb} alt='Facebook'></img></FacebookShareButton>
+                <FacebookShareButton url={location.pathname}><img src={fb} alt='Facebook'></img></FacebookShareButton>
                 <TwitterShareButton><img src={tw} alt='Twitter' ></img></TwitterShareButton>
                 <LinkedinShareButton><img src={Lin} alt='LikedIn'></img></LinkedinShareButton>
                 </div>

@@ -11,11 +11,13 @@ import Navbar from './components/Navbar/Navbar';
 import Footers from './components/footer/footer';
 import Notirei from './components/notirei/Notirei';
 import Hablemosde from './components/hablemosde/Hablemosde';
+import ScrollToTop from './utils/ScrollToTop';
 
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar/>
      <Switch> 
       <Route exact path="/" component={Home} />
