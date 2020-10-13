@@ -2,7 +2,6 @@ import React from 'react';
 import {useOneContentfulData} from '../../utils/client'
 import {useParams} from 'react-router-dom'
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
-import Sidebar from '../sidebar/Sidebar'
 import { useLocation } from 'react-router-dom'
 import fb from '../../images/postfbicon.png'
 import tw from '../../images/posttwittericon.png'
@@ -19,8 +18,7 @@ const Post = () => {
 
     if(setPost){
         return(
-            <div className='content-container'>
-            <Sidebar/>    
+            <div className='loader'>   
             <h1>Cargando..</h1>     
             </div>
         )
@@ -29,11 +27,10 @@ const Post = () => {
     const makeHTML = datos => documentToHtmlString(datos)
     return (
         <div className='content-container'>
-            <Sidebar/>  
-            <div className='posts-container'>
+            <div className='post-page-container'>
             <div className='post'>
                
-               <div className='image-container'>
+               <div className='post-image-container'>
                <img src={post.fields.image.fields.file.url} alt={`${post.fields.title} 2020`}></img>
                </div>
                <h1 className='post-title'>{post.fields.title}</h1>

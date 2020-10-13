@@ -1,6 +1,7 @@
 import React from 'react';
 import img1 from '../../images/qsbriefimg1.png'
 import img2 from '../../images/qsbriefimg2.png'
+import img from '../../images/qsimg.png'
 import {ReactComponent as Curve} from '../../images/qscurve.svg'
 const Quienessomos = () => {
     return ( 
@@ -11,7 +12,7 @@ const Quienessomos = () => {
                 <h1 className='qs-title'>¿Quiénes Somos?</h1>
                 <p><b>El Instituto Panamericano de Investigación para las Relaciones Exitosas e Inteligentes, A.C. (IPIREI)</b> nace como producto del trabajo y estudio por más de 20 años de la dinámica bio-socio-cultural en México. Está conformado por un grupo de profesionales expertos en los temas:</p>
             </div>
-            <div className='qs-imagen'></div>
+            <img className='qs-image' src={img}></img>
             <Curve className='qs-curve'></Curve>
             </div>
             

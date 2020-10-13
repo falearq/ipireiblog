@@ -21,6 +21,21 @@ import { useState,useEffect} from 'react'
     return [data,loading]
 }
 
+export const useContentfulDataMulti = (contentType) => {
+    const [data, setData] = useState({});
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+        client.getEntries({content_type: contentType})
+        .then(entries => {
+            setData(entries);
+            setLoading(false);
+        })
+        
+    },[contentType])
+    return [data,loading]
+}
+
 export const useOneContentfulData = (id) => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);

@@ -1,7 +1,9 @@
+
 import React,{Fragment, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import {useContentfulData} from '../../utils/client'
 import BasicPagination from './BasicPagination';
+import Slider from '../Slider/HeroSlider'
 
 
  function Posts() {
@@ -23,8 +25,11 @@ import BasicPagination from './BasicPagination';
     
     if(setArticles){
         return( 
-        
+        <Fragment>
+            <div className='loader'> 
         <h1>Cargando...</h1>
+        </div>
+        </Fragment>
             )
     }
 
@@ -45,7 +50,7 @@ import BasicPagination from './BasicPagination';
                    )
                 })}
                 
-            <BasicPagination></BasicPagination>
+                <div className='pagination'><BasicPagination/></div>
             </div>
         </Fragment>
     )

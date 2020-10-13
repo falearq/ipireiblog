@@ -10,7 +10,7 @@ import Contacto from './pages/Contacto';
 import Navbar from './components/Navbar/Navbar';
 import Footers from './components/footer/footer';
 import Notirei from './components/notirei/Notirei';
-import Hablemosde from './components/hablemosde/Hablemosde';
+import Encuestas from './components/encuestas/Encuestas';
 import ScrollToTop from './utils/ScrollToTop';
 
 
@@ -26,7 +26,7 @@ function App() {
       <Route exact path="/agenda-2030" component={Agenda2030} />
       <Route exact path="/contacto" component={Contacto} />
       <Route exact path="/notirei" component={Notirei} />
-      <Route exact path="/hablemosde" component={Hablemosde} />
+      <Route exact path="/encuestas" component={Encuestas} />
       <Route path="/post/:id" component={Post} />
       </Switch>
       <Footers/>

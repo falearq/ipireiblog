@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
-import {useContentfulData} from '../../utils/client'
+import {useContentfulDataMulti} from '../../utils/client'
 import BasicPagination from '../ArticlesPreview/BasicPagination';
-
+import HeaderNotirei from '../../images/header-notirei.png'
 
  function Notirei() {
-    const [articles, setArticles] = useContentfulData('notirei')
+    const [articles, setArticles] = useContentfulDataMulti('notirei')
   
     
     console.log(articles)
@@ -13,27 +13,33 @@ import BasicPagination from '../ArticlesPreview/BasicPagination';
     
     if(setArticles){
         return( 
-        
+            <Fragment>
+            <div className='notirei-header'><img src={HeaderNotirei} alt='Notirei'></img></div>
         <h1>Cargando...</h1>
+        </Fragment>
+            
             )
     }
 
     return (
         <div>
-            <div className='posts-container'>
+            <div className='notirei-header'><img src={HeaderNotirei} alt='Notirei'></img></div>
+            <div className='multi-content-container'>
+            <div className='multi-posts-container'>
             {articles.items.map(article =>{
                    return(
-                         <div key={article.fields.id} className='post-container'>
-                    <div className='image-container'>
+                    <Link className='multi-post-container' to={'/post/'+ article.sys.id} >  
+                         <div key={article.fields.id}>       
+                    <div className='multi-post-image'>
                     <img src={article.fields.image.fields.file.url} style={{ }} alt={`${article.fields.title} 2020`}></img>
                     </div>
                     <h1 className='post-title'> {article.fields.title}</h1>
-                   <div className='author'><p className='post-author-indicator'>Por:</p> {article.fields.author}</div>
-                    <p className='post-slug'>{article.fields.slug}</p>
-                    <Link className='post-link' to={'/post/'+ article.sys.id} >Seguir Leyendo</Link>
+                   <div className='multi-date'>{article.fields.date}</div>
             </div>
+            </Link>
                    )
                 })}
+                </div>
             <BasicPagination></BasicPagination>
             </div>
         </div>

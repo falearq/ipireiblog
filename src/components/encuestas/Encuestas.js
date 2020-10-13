@@ -4,7 +4,7 @@ import {useContentfulData} from '../../utils/client'
 import BasicPagination from '../ArticlesPreview/BasicPagination';
 
 
- function Hablemosde() {
+ function Encuestas() {
     const [articles, setArticles] = useContentfulData('hablemosde')
   
     
@@ -39,4 +39,4 @@ import BasicPagination from '../ArticlesPreview/BasicPagination';
     )
 }
 
-export default Hablemosde 
+export default Encuestas 
