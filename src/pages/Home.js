@@ -3,12 +3,12 @@ import ArticlesPreview from '../components/ArticlesPreview'
 import Landing from '../components/Landing'
 const Home = () => {
     return (
-        <Fragment>
+        <div className='load-trans'>
            
              <Landing />
              <ArticlesPreview /> 
          
-        </Fragment>
+        </div>
       );
 }
  

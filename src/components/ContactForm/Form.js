@@ -51,12 +51,12 @@ function Form() {
               <input
                 className="name-input name-input-1"
                 type="text"
-                placeholder="María"
+                placeholder="Ej. María"
                 name="firstname"
                 ref={register({
                   required: {
                     value: true,
-                    message: "⚠ Este campo es obligatorio",
+                    message: "⚠ Requerido",
                   },
                 })}
               />
@@ -72,12 +72,12 @@ function Form() {
               <input
                 className="name-input name-input-2"
                 type="text"
-                placeholder="Sánchez"
+                placeholder="Ej. Sánchez"
                 name="lastname"
                 ref={register({
                   required: {
                     value: true,
-                    message: "⚠ Este campo es obligatorio!",
+                    message: "⚠ Requerido",
                   },
                 })}
               />
@@ -96,7 +96,7 @@ function Form() {
               ref={register({
                 required: {
                   value: true,
-                  message: "⚠ Se requiere un e-mail de contacto",
+                  message: "⚠ E-mail requerido",
                 },
               })}
             />
@@ -110,7 +110,7 @@ function Form() {
               placeholder="Escribe aquí tu mensaje..."
               name="msg"
               ref={register({
-                required: { value: true, message: "⚠ Este campo es requerido" },
+                required: { value: true, message: "⚠ Mensaje requerido" },
               })}
             />
             <span style={{ color: "red", marginTop: "5px" }}>

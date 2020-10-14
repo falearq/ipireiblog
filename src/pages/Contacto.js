@@ -1,12 +1,12 @@
-import React,{Fragment} from 'react'
-import Form from '../components/ContactForm/Form'
+import React, { Fragment } from "react";
+import Form from "../components/ContactForm/Form";
 
 const Contacto = () => {
-    return ( 
-        <Fragment>
-            <Form/> 
-        </Fragment>
-     );
-}
- 
+  return (
+    <div className="load-trans">
+      <Form />
+    </div>
+  );
+};
+
 export default Contacto;

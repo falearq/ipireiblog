@@ -1,6 +1,7 @@
 import React from 'react';
 import {useOneContentfulData} from '../../utils/client'
 import {useParams} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import { useLocation } from 'react-router-dom'
 import fb from '../../images/postfbicon.png'
@@ -12,6 +13,14 @@ import { FacebookShareButton,
         LinkedinShareButton } from 'react-share'
 
 const Post = () => {
+
+    // go back to last page 
+    let history = useHistory();
+
+    const goBack = () => {
+        history.goBack();
+      };
+
     const id = useParams()
     const [post,setPost] = useOneContentfulData(id)
     const location = useLocation();
@@ -47,7 +56,7 @@ const Post = () => {
                 </div>
             
             </div>
-            <Link className='post-back-link'>← Volver a la página principal</Link>
+            <Link className='post-back-link' onClick={goBack}>← Volver a la página principal</Link>
             </div> 
     </div>
      );

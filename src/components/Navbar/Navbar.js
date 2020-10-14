@@ -27,11 +27,11 @@ export default function Navbar() {
             </div>
             <div> 
                 <ul className={isOn?'nav-menu active':'nav-menu'}>
-                <NavLink className='nav-links trans' to='/quienes-somos' activeClassName="active"> <li className='nav-links trans'>¿Quiénes somos?</li></NavLink>
-                <NavLink className='nav-links trans' to='/mision-vision' activeClassName="active"> <li className='nav-links trans'>Misión y Visión</li></NavLink>
-                <NavHashLink  className='nav-links trans' smooth to='/mision-vision#valores'><li className='nav-links trans'>Valores</li></NavHashLink>
-                <NavLink className='nav-links trans' to='/agenda-2030' activeClassName="active"> <li className='nav-links trans'>Agenda 2030</li></NavLink>
-                <NavLink  className='nav-links trans' to='/contacto' activeClassName="active"> <li className='nav-links trans'>Contacto</li></NavLink>
+                <NavLink className='nav-links trans' to='/quienes-somos' activeClassName="active"> <li className='links trans'>¿Quiénes somos?</li></NavLink>
+                <NavLink className='nav-links trans' to='/mision-vision' activeClassName="active"> <li className='links trans'>Misión y Visión</li></NavLink>
+                {/* <NavHashLink  className='nav-links trans' smooth to='/mision-vision#valores'><li className='links trans'>Valores</li></NavHashLink> */}
+                <NavLink className='nav-links trans' to='/agenda-2030' activeClassName="active"> <li className='links trans'>Agenda 2030</li></NavLink>
+                <NavLink  className='nav-links trans' to='/contacto' activeClassName="active"> <li className='links trans'>Contacto</li></NavLink>
                 </ul>
             </div>
 
